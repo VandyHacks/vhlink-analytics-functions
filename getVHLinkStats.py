@@ -21,7 +21,7 @@ def lambda_handler(event, context):
         }
     
     dynamodb = boto3.resource('dynamodb')
-    table = dynamodb.Table('VHLink_stats')
+    table = dynamodb.Table('vhlink_stats')
     path = event['pathParameters']['path']
     if path == '':
         stats = []
